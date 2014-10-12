@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5902C38B19E9236200623218 /* TemplateIcon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5902C38919E9236200623218 /* TemplateIcon2x.png */; };
 		5902C38E19E923C800623218 /* PodFile in Resources */ = {isa = PBXBuildFile; fileRef = 5902C38C19E923C800623218 /* PodFile */; };
 		5902C38F19E923C800623218 /* TemplateIcon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5902C38D19E923C800623218 /* TemplateIcon2x.png */; };
 		5902C39219E9296900623218 /* QuestionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5902C39119E9296900623218 /* QuestionObject.m */; };
 		5902C39519E9296A00623218 /* OptionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5902C39419E9296A00623218 /* OptionObject.m */; };
+		59D2FEFB19EABE33008D2E9F /* CDCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D2FEFA19EABE33008D2E9F /* CDCViewController.m */; };
+		59D2FEFE19EAC5E0008D2E9F /* questions.xml in Resources */ = {isa = PBXBuildFile; fileRef = 59D2FEFC19EAC5E0008D2E9F /* questions.xml */; };
+		59D2FEFF19EAC5E0008D2E9F /* TemplateIcon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59D2FEFD19EAC5E0008D2E9F /* TemplateIcon2x.png */; };
+		59D2FF0219EACADE008D2E9F /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D2FF0119EACADE008D2E9F /* QuestionViewController.m */; };
 		59DC812219E621A400579112 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DC812119E621A400579112 /* main.m */; };
 		59DC812519E621A400579112 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DC812419E621A400579112 /* AppDelegate.m */; };
 		59DC812819E621A400579112 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DC812719E621A400579112 /* ViewController.m */; };
@@ -36,13 +39,18 @@
 /* Begin PBXFileReference section */
 		346513C28C70C3031F4A8C24 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		39228E505F988A386BEB95A8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		5902C38919E9236200623218 /* TemplateIcon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TemplateIcon2x.png; sourceTree = "<group>"; };
 		5902C38C19E923C800623218 /* PodFile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PodFile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5902C38D19E923C800623218 /* TemplateIcon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TemplateIcon2x.png; sourceTree = "<group>"; };
 		5902C39019E9296900623218 /* QuestionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionObject.h; sourceTree = "<group>"; };
 		5902C39119E9296900623218 /* QuestionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionObject.m; sourceTree = "<group>"; };
 		5902C39319E9296A00623218 /* OptionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionObject.h; sourceTree = "<group>"; };
 		5902C39419E9296A00623218 /* OptionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionObject.m; sourceTree = "<group>"; };
+		59D2FEF919EABE33008D2E9F /* CDCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDCViewController.h; sourceTree = "<group>"; };
+		59D2FEFA19EABE33008D2E9F /* CDCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDCViewController.m; sourceTree = "<group>"; };
+		59D2FEFC19EAC5E0008D2E9F /* questions.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = questions.xml; sourceTree = "<group>"; };
+		59D2FEFD19EAC5E0008D2E9F /* TemplateIcon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TemplateIcon2x.png; sourceTree = "<group>"; };
+		59D2FF0019EACADE008D2E9F /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
+		59D2FF0119EACADE008D2E9F /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
 		59DC811C19E621A400579112 /* EbolaQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EbolaQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59DC812019E621A400579112 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59DC812119E621A400579112 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -117,7 +125,12 @@
 				5902C39419E9296A00623218 /* OptionObject.m */,
 				5902C39019E9296900623218 /* QuestionObject.h */,
 				5902C39119E9296900623218 /* QuestionObject.m */,
-				5902C38919E9236200623218 /* TemplateIcon2x.png */,
+				59D2FEF919EABE33008D2E9F /* CDCViewController.h */,
+				59D2FEFA19EABE33008D2E9F /* CDCViewController.m */,
+				59D2FEFC19EAC5E0008D2E9F /* questions.xml */,
+				59D2FEFD19EAC5E0008D2E9F /* TemplateIcon2x.png */,
+				59D2FF0019EACADE008D2E9F /* QuestionViewController.h */,
+				59D2FF0119EACADE008D2E9F /* QuestionViewController.m */,
 			);
 			path = EbolaQuiz;
 			sourceTree = "<group>";
@@ -216,6 +229,7 @@
 				TargetAttributes = {
 					59DC811B19E621A400579112 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 4DU2MUU5QL;
 					};
 					59DC813419E621A500579112 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -247,12 +261,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5902C38B19E9236200623218 /* TemplateIcon2x.png in Resources */,
 				5902C38E19E923C800623218 /* PodFile in Resources */,
+				59D2FEFE19EAC5E0008D2E9F /* questions.xml in Resources */,
 				5902C38F19E923C800623218 /* TemplateIcon2x.png in Resources */,
 				59DC812B19E621A400579112 /* Main.storyboard in Resources */,
 				59DC813019E621A400579112 /* LaunchScreen.xib in Resources */,
 				59DC812D19E621A400579112 /* Images.xcassets in Resources */,
+				59D2FEFF19EAC5E0008D2E9F /* TemplateIcon2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,10 +320,12 @@
 			files = (
 				59DC812819E621A400579112 /* ViewController.m in Sources */,
 				5902C39219E9296900623218 /* QuestionObject.m in Sources */,
+				59D2FF0219EACADE008D2E9F /* QuestionViewController.m in Sources */,
 				59DC812519E621A400579112 /* AppDelegate.m in Sources */,
 				59DC814719E621C900579112 /* EbolaQuiz.xcdatamodeld in Sources */,
 				59DC812219E621A400579112 /* main.m in Sources */,
 				5902C39519E9296A00623218 /* OptionObject.m in Sources */,
+				59D2FEFB19EABE33008D2E9F /* CDCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +448,8 @@
 			baseConfigurationReference = 39228E505F988A386BEB95A8 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = EbolaQuiz/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -443,6 +462,8 @@
 			baseConfigurationReference = 864D63020B295AC002743D50 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = EbolaQuiz/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

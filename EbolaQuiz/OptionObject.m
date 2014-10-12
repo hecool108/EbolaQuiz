@@ -7,13 +7,14 @@
 //
 
 #import "OptionObject.h"
-#import "QuestionObject.h"
-
 
 @implementation OptionObject
-
-@dynamic id;
-@dynamic statement;
-@dynamic questionBelongsTo;
-
+- (id)initWithTFHppleElement:(TFHppleElement *)xmlElement{
+    self = [super init];
+    if (self) {
+        self.id = [[xmlElement attributes] objectForKey:@"id"];
+        self.statement = [[xmlElement attributes] objectForKey:@"statement"];
+    }
+    return self;
+}
 @end

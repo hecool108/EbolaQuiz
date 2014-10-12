@@ -7,14 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
-
-@class QuestionObject;
-
-@interface OptionObject : NSManagedObject
-
-@property (nonatomic, retain) NSString * id;
-@property (nonatomic, retain) NSString * statement;
-@property (nonatomic, retain) QuestionObject *questionBelongsTo;
+#import "TFHpple.h"
+@interface OptionObject : NSObject
+@property (nonatomic) NSString * id;
+@property (nonatomic) NSString * statement;
+- (id)initWithTFHppleElement:(TFHppleElement *)xmlElement;
 
 @end

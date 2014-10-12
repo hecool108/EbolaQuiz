@@ -7,14 +7,23 @@
 //
 
 #import "QuestionObject.h"
-
+#import "OptionObject.h"
 
 @implementation QuestionObject
-
-@dynamic answers;
-@dynamic desc;
-@dynamic id;
-@dynamic subject;
-@dynamic options;
-
+- (id)initWithTFHppleElement:(TFHppleElement *)xmlElement
+{
+    self = [super init];
+    if (self) {
+        self.id = [[xmlElement attributes] objectForKey:@"id"];
+        self.subject = [[xmlElement attributes] objectForKey:@"subject"];
+        self.desc = [[xmlElement attributes] objectForKey:@"desc"];
+        self.answers = [[xmlElement attributes] objectForKey:@"answers"];
+        NSArray *elements  = [xmlElement childrenWithTagName:@"option"];
+        self.options = [NSMutableArray array];
+        for (TFHppleElement *optionEle in elements) {
+            [self.options addObject:[[OptionObject alloc] initWithTFHppleElement:optionEle]];
+        }
+    }
+    return self;
+}
 @end

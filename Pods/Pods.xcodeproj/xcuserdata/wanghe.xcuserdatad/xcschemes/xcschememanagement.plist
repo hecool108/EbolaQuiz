@@ -4,7 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-MagicalRecord.xcscheme</key>
+		<key>Pods-BlocksKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-hpple.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-pop.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>07B95861599D92057F76515F</key>
+		<key>055B697FAF5AD8E159474392</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B4D7C7A7509591B310EE0454</key>
+		<key>29471E23D1DA17AB337B4DE4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>47DF15D1D12F0BF937B0936C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7474B005440134AF1DD5E5D6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

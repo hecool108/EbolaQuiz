@@ -7,23 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
+#import "TFHpple.h"
+@interface QuestionObject : NSObject
 
 
-@interface QuestionObject : NSManagedObject
-
-@property (nonatomic, retain) id answers;
-@property (nonatomic, retain) NSString * desc;
 @property (nonatomic, retain) NSString * id;
 @property (nonatomic, retain) NSString * subject;
-@property (nonatomic, retain) NSSet *options;
-@end
+@property (nonatomic, retain) NSString * desc;
+@property (nonatomic, retain) NSMutableArray *options;
+@property (nonatomic, retain) NSString *answers;
 
-@interface QuestionObject (CoreDataGeneratedAccessors)
-
-- (void)addOptionsObject:(NSManagedObject *)value;
-- (void)removeOptionsObject:(NSManagedObject *)value;
-- (void)addOptions:(NSSet *)values;
-- (void)removeOptions:(NSSet *)values;
-
+- (id)initWithTFHppleElement:(TFHppleElement *)xmlElement;
 @end
