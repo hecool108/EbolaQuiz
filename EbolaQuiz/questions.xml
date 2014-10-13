@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <qs>
     <question id="1"
-        subject="Question1"
-        answers="1"
+        subject="Do you have Ebola?"
+        answers="2"
         desc=""
         image="">
-        <option id = "1" statement="option1*"/>
-        <option id = "2" statement="option2"/>
-        <option id = "3" statement="option3"/>
+        <option id = "1" statement="Uhmm..."/>
+        <option id = "2" statement="No"/>
     </question>
-        
+    <question id="2"
+        subject="Are you currently bleeding out of EVERY hole you have?"
+        answers="1,2"
+        desc=""
+        image="">
+        <option id = "1" statement="Not every hole"/>
+        <option id = "2" statement="No"/>
+        <option id = "3" statement="Yep. All of them."/>
+    </question>
 </qs>

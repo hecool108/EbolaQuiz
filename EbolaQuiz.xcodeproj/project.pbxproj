@@ -11,6 +11,8 @@
 		5902C38F19E923C800623218 /* TemplateIcon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5902C38D19E923C800623218 /* TemplateIcon2x.png */; };
 		5902C39219E9296900623218 /* QuestionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5902C39119E9296900623218 /* QuestionObject.m */; };
 		5902C39519E9296A00623218 /* OptionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5902C39419E9296A00623218 /* OptionObject.m */; };
+		598FD51A19EC1DDF00D1B64E /* OptionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 598FD51919EC1DDF00D1B64E /* OptionItem.m */; };
+		598FD51D19EC203200D1B64E /* UIGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 598FD51C19EC203200D1B64E /* UIGenerator.m */; };
 		59D2FEFB19EABE33008D2E9F /* CDCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D2FEFA19EABE33008D2E9F /* CDCViewController.m */; };
 		59D2FEFE19EAC5E0008D2E9F /* questions.xml in Resources */ = {isa = PBXBuildFile; fileRef = 59D2FEFC19EAC5E0008D2E9F /* questions.xml */; };
 		59D2FEFF19EAC5E0008D2E9F /* TemplateIcon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59D2FEFD19EAC5E0008D2E9F /* TemplateIcon2x.png */; };
@@ -45,6 +47,10 @@
 		5902C39119E9296900623218 /* QuestionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionObject.m; sourceTree = "<group>"; };
 		5902C39319E9296A00623218 /* OptionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionObject.h; sourceTree = "<group>"; };
 		5902C39419E9296A00623218 /* OptionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionObject.m; sourceTree = "<group>"; };
+		598FD51819EC1DDF00D1B64E /* OptionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionItem.h; sourceTree = "<group>"; };
+		598FD51919EC1DDF00D1B64E /* OptionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionItem.m; sourceTree = "<group>"; };
+		598FD51B19EC203200D1B64E /* UIGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGenerator.h; sourceTree = "<group>"; };
+		598FD51C19EC203200D1B64E /* UIGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGenerator.m; sourceTree = "<group>"; };
 		59D2FEF919EABE33008D2E9F /* CDCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDCViewController.h; sourceTree = "<group>"; };
 		59D2FEFA19EABE33008D2E9F /* CDCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDCViewController.m; sourceTree = "<group>"; };
 		59D2FEFC19EAC5E0008D2E9F /* questions.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = questions.xml; sourceTree = "<group>"; };
@@ -113,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				59DC812319E621A400579112 /* AppDelegate.h */,
+				598FD51B19EC203200D1B64E /* UIGenerator.h */,
+				598FD51C19EC203200D1B64E /* UIGenerator.m */,
 				59DC812419E621A400579112 /* AppDelegate.m */,
 				59DC812619E621A400579112 /* ViewController.h */,
 				59DC812719E621A400579112 /* ViewController.m */,
@@ -131,6 +139,8 @@
 				59D2FEFD19EAC5E0008D2E9F /* TemplateIcon2x.png */,
 				59D2FF0019EACADE008D2E9F /* QuestionViewController.h */,
 				59D2FF0119EACADE008D2E9F /* QuestionViewController.m */,
+				598FD51819EC1DDF00D1B64E /* OptionItem.h */,
+				598FD51919EC1DDF00D1B64E /* OptionItem.m */,
 			);
 			path = EbolaQuiz;
 			sourceTree = "<group>";
@@ -320,10 +330,12 @@
 			files = (
 				59DC812819E621A400579112 /* ViewController.m in Sources */,
 				5902C39219E9296900623218 /* QuestionObject.m in Sources */,
+				598FD51A19EC1DDF00D1B64E /* OptionItem.m in Sources */,
 				59D2FF0219EACADE008D2E9F /* QuestionViewController.m in Sources */,
 				59DC812519E621A400579112 /* AppDelegate.m in Sources */,
 				59DC814719E621C900579112 /* EbolaQuiz.xcdatamodeld in Sources */,
 				59DC812219E621A400579112 /* main.m in Sources */,
+				598FD51D19EC203200D1B64E /* UIGenerator.m in Sources */,
 				5902C39519E9296A00623218 /* OptionObject.m in Sources */,
 				59D2FEFB19EABE33008D2E9F /* CDCViewController.m in Sources */,
 			);
@@ -450,10 +462,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = EbolaQuiz/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -464,10 +478,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = EbolaQuiz/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

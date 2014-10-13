@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EbolaQuiz/QuestionViewController.m"
-            timestampString = "434820204.436324"
+            timestampString = "434908938.70018"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "-initQuestions"
             landmarkType = "5">
          </BreakpointContent>
@@ -96,6 +96,22 @@
             startingLineNumber = "23"
             endingLineNumber = "23"
             landmarkName = "-initWithTFHppleElement:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EbolaQuiz/QuestionViewController.m"
+            timestampString = "434908954.693192"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "-nextQuestion"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

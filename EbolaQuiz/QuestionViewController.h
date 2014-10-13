@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface QuestionViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 
 @end

@@ -40,8 +40,8 @@
 }
 - (IBAction)showQuestionView:(id)sender {
     QuestionViewController *questionView =  [self.storyboard instantiateViewControllerWithIdentifier:@"QuestionViewController"];
-//    [self presentViewController:questionView animated:YES completion:nil];
     [self.navigationController pushViewController:questionView animated:YES];
+    
 }
 
 @end
