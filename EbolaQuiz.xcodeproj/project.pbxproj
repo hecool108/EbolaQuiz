@@ -25,6 +25,7 @@
 		59DC813019E621A400579112 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59DC812E19E621A400579112 /* LaunchScreen.xib */; };
 		59DC813C19E621A500579112 /* EbolaQuizTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DC813B19E621A500579112 /* EbolaQuizTests.m */; };
 		59DC814719E621C900579112 /* EbolaQuiz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59DC814519E621C900579112 /* EbolaQuiz.xcdatamodeld */; };
+		59E72EDD19ECFD360002D55A /* WrongAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E72EDC19ECFD360002D55A /* WrongAnswerViewController.m */; };
 		DF04A3FE5DC0FCB84AEFE0DB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 346513C28C70C3031F4A8C24 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,8 @@
 		59DC813A19E621A500579112 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59DC813B19E621A500579112 /* EbolaQuizTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EbolaQuizTests.m; sourceTree = "<group>"; };
 		59DC814619E621C900579112 /* EbolaQuiz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EbolaQuiz.xcdatamodel; sourceTree = "<group>"; };
+		59E72EDB19ECFD360002D55A /* WrongAnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WrongAnswerViewController.h; sourceTree = "<group>"; };
+		59E72EDC19ECFD360002D55A /* WrongAnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WrongAnswerViewController.m; sourceTree = "<group>"; };
 		864D63020B295AC002743D50 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +144,8 @@
 				59D2FF0119EACADE008D2E9F /* QuestionViewController.m */,
 				598FD51819EC1DDF00D1B64E /* OptionItem.h */,
 				598FD51919EC1DDF00D1B64E /* OptionItem.m */,
+				59E72EDB19ECFD360002D55A /* WrongAnswerViewController.h */,
+				59E72EDC19ECFD360002D55A /* WrongAnswerViewController.m */,
 			);
 			path = EbolaQuiz;
 			sourceTree = "<group>";
@@ -333,6 +338,7 @@
 				598FD51A19EC1DDF00D1B64E /* OptionItem.m in Sources */,
 				59D2FF0219EACADE008D2E9F /* QuestionViewController.m in Sources */,
 				59DC812519E621A400579112 /* AppDelegate.m in Sources */,
+				59E72EDD19ECFD360002D55A /* WrongAnswerViewController.m in Sources */,
 				59DC814719E621C900579112 /* EbolaQuiz.xcdatamodeld in Sources */,
 				59DC812219E621A400579112 /* main.m in Sources */,
 				598FD51D19EC203200D1B64E /* UIGenerator.m in Sources */,

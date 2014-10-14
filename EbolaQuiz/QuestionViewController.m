@@ -11,6 +11,7 @@
 #import "OptionItem.h"
 #import "OptionObject.h"
 #import "TFHpple.h"
+#import "Pop.h"
 @interface QuestionViewController (){
     NSMutableArray *questionsItems;
     NSMutableArray *questions;
@@ -27,11 +28,18 @@
     questionIndex = 0;
     [self initQuestions];
     [self initView];
+    
+    CGRect tableFrame = self.questionButtonBar.frame;
+    tableFrame.origin.y = self.view.frame.size.height - 90;
+    [self.questionButtonBar setFrame:tableFrame];
+    tableFrame = self.wrongButtonBar.frame;
+    tableFrame.origin.y = self.view.frame.size.height;
+    [self.wrongButtonBar setFrame:tableFrame];
 }
 -(void)initView{
     questionsItems = [NSMutableArray array];
     for (int i = 0; i < 4; i++) {
-        OptionItem *optionItem = [[OptionItem alloc] initWithFrame:CGRectMake(10, 100+i*60, 300, 50)];
+        OptionItem *optionItem = [[OptionItem alloc] initWithFrame:CGRectMake(10, 120+i*60, 300, 50)];
         optionItem.backgroundColor = [UIColor grayColor];
         [self.view addSubview:optionItem];
         [questionsItems addObject:optionItem];
@@ -43,14 +51,67 @@
 }
 -(void)onTap:(UITapGestureRecognizer *)sender{
     OptionItem *item = (OptionItem *)sender.view;
-    if ([item.optionObj.id isEqualToString:currentQuestion.answers]) {
-        NSLog(@"YES!!");
+    if ([currentQuestion isRight:item.optionObj.id]) {
         [self nextQuestion];
     }else
     {
-        NSLog(@"NO!!!!");
+        [self showWrongAnsewerAlert];
+        [self showWrongAnsewerButtonBar];
+        [self hideQuestionButtonBar];
+        [self hideQuestionLabel];
+        [self hideAllItem];
     }
     
+}
+-(void)showWrongAnsewerAlert{
+    POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+    animation.toValue = @(100);
+    [self.wrongAleartLabel.layer pop_addAnimation:animation forKey:@"showWrongAnsewerAlert"];
+}
+-(void)hideWrongAnsewerAlert{
+    POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+    animation.toValue = @(-100);
+    [self.wrongAleartLabel.layer pop_addAnimation:animation forKey:@"hideWrongAnsewerAlert"];
+}
+-(void)showQuestionLabel{
+    POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+    animation.toValue = @(64);
+    [self.questionLabel.layer pop_addAnimation:animation forKey:@"showQuestionLabel"];
+}
+-(void)hideQuestionLabel{
+    POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+    animation.toValue = @(-100);
+    [self.questionLabel.layer pop_addAnimation:animation forKey:@"hideQuestionLabel"];
+}
+-(void)showWrongAnsewerButtonBar{
+    POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+    animation.toValue = @(self.view.frame.size.height - 45);
+    [self.wrongButtonBar pop_addAnimation:animation forKey:@"showWrongAnsewerButtonBar"];
+}
+-(void)hideWrongAnsewerButtonBar{
+    POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+    animation.toValue = @(self.view.frame.size.height + 45);
+    [self.wrongButtonBar.layer pop_addAnimation:animation forKey:@"hideWrongAnsewerButtonBar"];
+}
+-(void)showQuestionButtonBar{
+    POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+    animation.toValue = @(self.view.frame.size.height - 45);
+    [self.questionButtonBar pop_addAnimation:animation forKey:@"showWrongAnsewerButtonBar"];
+}
+-(void)hideQuestionButtonBar{
+    POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+    animation.toValue = @(self.view.frame.size.height + 45);
+    [self.questionButtonBar.layer pop_addAnimation:animation forKey:@"hideWrongAnsewerButtonBar"];
+}
+-(void)showAllItem{
+    for (OptionItem *item in questionsItems) {
+        [item setHidden:NO];
+    }
+}
+-(void)hideAllItem{
+    for (OptionItem *item in questionsItems) {
+        [item setHidden:YES];
+    }
 }
 -(void)initQuestions{
     questions = [NSMutableArray array];
@@ -92,5 +153,19 @@
         }
         
     }
+}
+
+- (IBAction)shareQuestion:(id)sender {
+}
+
+- (IBAction)letMeTryAgain:(id)sender {
+    [self hideWrongAnsewerAlert];
+    [self hideWrongAnsewerButtonBar];
+    [self showQuestionButtonBar];
+    [self showQuestionLabel];
+    [self showAllItem];
+}
+
+- (IBAction)shareResult:(id)sender {
 }
 @end

@@ -15,7 +15,9 @@
 @property (nonatomic, retain) NSString * subject;
 @property (nonatomic, retain) NSString * desc;
 @property (nonatomic, retain) NSMutableArray *options;
-@property (nonatomic, retain) NSString *answers;
+@property (nonatomic, retain) NSArray *answers;
+@property (nonatomic, retain) NSString *type;
 
 - (id)initWithTFHppleElement:(TFHppleElement *)xmlElement;
+-(BOOL)isRight:(NSString *)answer;
 @end

@@ -17,7 +17,16 @@
         self.id = [[xmlElement attributes] objectForKey:@"id"];
         self.subject = [[xmlElement attributes] objectForKey:@"subject"];
         self.desc = [[xmlElement attributes] objectForKey:@"desc"];
-        self.answers = [[xmlElement attributes] objectForKey:@"answers"];
+        NSString *answerString = [[xmlElement attributes] objectForKey:@"answers"];
+        if ([answerString isEqualToString:@"fillin"]) {
+            self.type = @"fillin";
+            self.answers = [NSArray array];
+        }else
+        {
+            self.type = @"optional";
+            self.answers = [answerString componentsSeparatedByString:@","];
+        }
+        
         NSArray *elements  = [xmlElement childrenWithTagName:@"option"];
         self.options = [NSMutableArray array];
         for (TFHppleElement *optionEle in elements) {
@@ -25,5 +34,13 @@
         }
     }
     return self;
+}
+-(BOOL)isRight:(NSString *)answer{
+    for (NSString *rightAnswer in self.answers) {
+        if ([rightAnswer isEqualToString:answer]) {
+            return YES;
+        }
+    }
+    return NO;
 }
 @end
