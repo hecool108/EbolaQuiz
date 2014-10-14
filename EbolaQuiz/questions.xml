@@ -74,12 +74,10 @@
         <option id = "4" statement="Not even a little."/>
     </question>
     <question id="9"
-        subject="Is this you?"
-        answers="2"
+        subject="Trick question. It's not transmitted that way doe. Just don't lick them or do gross stuff."
+        answers="desc"
         desc=""
         image="">
-        <option id = "1" statement="Yeah that me!"/>
-        <option id = "2" statement="Nah, who dat?"/>
     </question>
     <question id="10"
         subject="How are you feeling today?"
@@ -124,12 +122,12 @@
         <option id = "3" statement="Not a good vacation spot. Nope."/>
     </question>
     <question id="15"
-        subject="How long ago did the Ebola guy spit in your eye?"
+        subject="How long ago did that Ebola guy spit in your eye?"
         answers="1,2"
         desc=""
         image="">
         <option id = "1" statement="That didn't happen."/>
-        <option id = "2" statement="More than 21 days ago."/>
+        <option id = "2" statement="more than 21 days ago. Still no Ebolas!"/>
         <option id = "3" statement="Less than 21 days ago."/>
     </question>
     <question id="16"
@@ -142,13 +140,13 @@
         <option id = "3" statement="No."/>
     </question>
     <question id="17"
-        subject="Did you eat some sketchy vegetables and now you can't get off the toilet?"
-        answers="1,2,3"
+        subject="What's more contagious? Measles or Ebola?"
+        answers="1,3"
         desc=""
         image="">
-        <option id = "1" statement="That's E.Coli. Not Ebola."/>
-        <option id = "2" statement="Yes."/>
-        <option id = "3" statement="No."/>
+        <option id = "1" statement="Measles. It actually is."/>
+        <option id = "2" statement="I think Ebola, because I have it now, not because I know science."/>
+        <option id = "3" statement="Love."/>
     </question>
     <question id="18"
         subject="A guy with Ebola just dropped a Dorito out of his mouth. Did you eat it?"
@@ -168,7 +166,7 @@
     </question>
     <question id="20"
         subject="Fill in the blank. I have _____"
-        answers="2,3"
+        answers="2,3,4"
         desc=""
         image="">
         <option id = "1" statement="EVD"/>

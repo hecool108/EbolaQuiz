@@ -18,19 +18,21 @@
         self.subject = [[xmlElement attributes] objectForKey:@"subject"];
         self.desc = [[xmlElement attributes] objectForKey:@"desc"];
         NSString *answerString = [[xmlElement attributes] objectForKey:@"answers"];
-        if ([answerString isEqualToString:@"fillin"]) {
-            self.type = @"fillin";
+        if ([answerString isEqualToString:@"desc"]) {
+            self.type = @"desc";
             self.answers = [NSArray array];
         }else
         {
             self.type = @"optional";
             self.answers = [answerString componentsSeparatedByString:@","];
         }
-        
-        NSArray *elements  = [xmlElement childrenWithTagName:@"option"];
         self.options = [NSMutableArray array];
-        for (TFHppleElement *optionEle in elements) {
-            [self.options addObject:[[OptionObject alloc] initWithTFHppleElement:optionEle]];
+        if ([self.type isEqualToString:@"optional"]) {
+            NSArray *elements  = [xmlElement childrenWithTagName:@"option"];
+            
+            for (TFHppleElement *optionEle in elements) {
+                [self.options addObject:[[OptionObject alloc] initWithTFHppleElement:optionEle]];
+            }
         }
     }
     return self;

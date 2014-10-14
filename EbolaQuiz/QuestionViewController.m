@@ -12,6 +12,7 @@
 #import "OptionObject.h"
 #import "TFHpple.h"
 #import "Pop.h"
+#import "BlocksKit.h"
 @interface QuestionViewController (){
     NSMutableArray *questionsItems;
     NSMutableArray *questions;
@@ -28,13 +29,13 @@
     questionIndex = 0;
     [self initQuestions];
     [self initView];
-    
     CGRect tableFrame = self.questionButtonBar.frame;
     tableFrame.origin.y = self.view.frame.size.height - 90;
     [self.questionButtonBar setFrame:tableFrame];
     tableFrame = self.wrongButtonBar.frame;
     tableFrame.origin.y = self.view.frame.size.height;
     [self.wrongButtonBar setFrame:tableFrame];
+    
 }
 -(void)initView{
     questionsItems = [NSMutableArray array];
@@ -75,7 +76,7 @@
 }
 -(void)showQuestionLabel{
     POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
-    animation.toValue = @(64);
+    animation.toValue = @(90);
     [self.questionLabel.layer pop_addAnimation:animation forKey:@"showQuestionLabel"];
 }
 -(void)hideQuestionLabel{
@@ -142,6 +143,21 @@
 }
 -(void)showQuestion{
     self.questionLabel.text = currentQuestion.subject;
+    self.questionLabel.frame = CGRectMake(self.questionLabel.frame.origin.x, self.questionLabel.frame.origin.y, 270, 0);
+    self.questionLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    self.questionLabel.numberOfLines = 0;
+    [self.questionLabel sizeToFit];
+   
+    POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+    animation.toValue = @(60-(self.questionLabel.numberOfLines-1)*20);
+//    if ([currentQuestion.type isEqualToString:@"optional"]) {
+//        
+//    }else
+//    {
+//        animation.toValue = @(150);
+//    }    
+    [self.questionLabel.layer pop_addAnimation:animation forKey:@"adjustQuestionLabel"];
+    
     for (int i = 0; i < 4; i++) {
         OptionItem *item = [questionsItems objectAtIndex:i];
         if (i < currentQuestion.options.count) {
@@ -151,13 +167,26 @@
         {
             [item updateData:nil];
         }
-        
     }
+    [NSTimer bk_performBlock:^{
+        float yTo = 120.0f;
+        for (int i = 0; i < 4; i++) {
+            OptionItem *item = [questionsItems objectAtIndex:i];
+            POPSpringAnimation *animationAdaptY = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+            animationAdaptY.toValue = @(yTo + item.hTo/2);
+            NSLog(@"%f",item.hTo);
+            [item.layer pop_addAnimation:animationAdaptY forKey:@"animationAdaptY"];
+            yTo += item.frame.size.height + 10;
+        }
+    } afterDelay:0.2];
 }
 
 - (IBAction)shareQuestion:(id)sender {
+    
 }
-
+- (IBAction)shareResult:(id)sender {
+    
+}
 - (IBAction)letMeTryAgain:(id)sender {
     [self hideWrongAnsewerAlert];
     [self hideWrongAnsewerButtonBar];
@@ -166,6 +195,13 @@
     [self showAllItem];
 }
 
-- (IBAction)shareResult:(id)sender {
+- (IBAction)backToMain:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (IBAction)questionLabelTap:(id)sender {
+    if ([currentQuestion.type isEqualToString:@"desc"]) {
+        [self nextQuestion];
+    }
 }
 @end

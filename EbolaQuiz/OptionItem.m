@@ -9,6 +9,7 @@
 #import "OptionItem.h"
 #import "UIGenerator.h"
 #import "Pop.h"
+#import "BlocksKit.h"
 @interface OptionItem(){
     UILabel *optionLabel;
     UIButton *theButton;
@@ -32,12 +33,27 @@
 -(void)updateData:(OptionObject *)option{
     _optionObj = option;
     POPSpringAnimation *animationFadeOut = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerOpacity];
+    animationFadeOut.fromValue = @(1);
     animationFadeOut.toValue = @(0);
-    animationFadeOut.springBounciness = 10;
-    [animationFadeOut setCompletionBlock:^(POPAnimation *animation, BOOL finished) {
+    [self.layer pop_addAnimation:animationFadeOut forKey:@"fadeOut"];
+    [NSTimer bk_performBlock:^{
         if (_optionObj) {
+            self.alpha = 0;
             [self setHidden:NO];
             optionLabel.text = _optionObj.statement;
+            optionLabel.frame = CGRectMake(optionLabel.frame.origin.x, optionLabel.frame.origin.y, 280, 0);
+            optionLabel.lineBreakMode = NSLineBreakByWordWrapping;
+            optionLabel.numberOfLines = 0;
+            [optionLabel sizeToFit];
+            
+            self.hTo = optionLabel.frame.size.height + 20;
+            self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.hTo);
+            optionLabel.frame = CGRectMake(optionLabel.frame.origin.x, (self.hTo - optionLabel.frame.size.height)/2, optionLabel.frame.size.width, optionLabel.frame.size.height);
+            
+            //            POPSpringAnimation *animationSize = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerSize];
+            //            animationSize.toValue = [NSValue valueWithCGSize:CGSizeMake(self.frame.size.width, self.hTo)];
+            //            [self.layer pop_addAnimation:animationSize forKey:@"animationSize"];
+            
             POPSpringAnimation *animationFadeIn = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerOpacity];
             animationFadeIn.fromValue = @(0.0);
             animationFadeIn.toValue = @(1.0);
@@ -47,7 +63,6 @@
         {
             [self setHidden:YES];
         }
-    }];
-    [self.layer pop_addAnimation:animationFadeOut forKey:@"fadeOut"];
+    } afterDelay:0.2];
 }
 @end

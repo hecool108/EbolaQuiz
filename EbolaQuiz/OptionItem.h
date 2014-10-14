@@ -10,5 +10,6 @@
 #import "OptionObject.h"
 @interface OptionItem : UIView
 @property(nonatomic)OptionObject *optionObj;
+@property(assign)float hTo;
 -(void)updateData:(OptionObject *)option;
 @end

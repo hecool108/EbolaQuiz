@@ -18,6 +18,8 @@
 - (IBAction)shareQuestion:(id)sender;
 - (IBAction)letMeTryAgain:(id)sender;
 - (IBAction)shareResult:(id)sender;
+- (IBAction)backToMain:(id)sender;
+- (IBAction)questionLabelTap:(id)sender;
 
 
 @end
