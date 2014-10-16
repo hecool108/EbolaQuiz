@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "QuestionViewController.h"
 #import "Pop.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface ViewController (){
     
@@ -44,4 +45,9 @@
     
 }
 
+- (IBAction)shareApp:(id)sender {
+    FBLoginView *loginView = [[FBLoginView alloc] init];
+    loginView.center = self.view.center;
+    [self.view addSubview:loginView];
+}
 @end

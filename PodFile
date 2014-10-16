@@ -2,4 +2,4 @@ source 'https://github.com/CocoaPods/Specs.git'
 pod "pop"
 pod "BlocksKit"
 pod "hpple"
-
+pod "Facebook-iOS-SDK"

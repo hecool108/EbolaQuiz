@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)shareApp:(id)sender;
 
 @end
 
