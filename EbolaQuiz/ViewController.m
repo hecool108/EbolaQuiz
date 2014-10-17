@@ -9,13 +9,17 @@
 #import "ViewController.h"
 #import "QuestionViewController.h"
 #import "Pop.h"
+#import "AppDelegate.h"
+#import "ShareBar.h"
 #import <FacebookSDK/FacebookSDK.h>
 
 @interface ViewController (){
     
+    ShareBar *shareBar;
     __weak IBOutlet UIImageView *topTitleImage;
     __weak IBOutlet UIButton *takeQuizButton;
     __weak IBOutlet UIView *buttomBar;
+    FBLoginView *fbLoginView;
 }
 
 @end
@@ -26,6 +30,13 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    shareBar = [[ShareBar alloc] initWithFrame:CGRectMake(0, 0, 320, 160)];
+    shareBar.center = CGPointMake(self.view.center.x, self.view.frame.size.height + 80);
+    shareBar.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+    shareBar.screenH = self.view.frame.size.height;
+    shareBar.mode = ShareBarModeApp;
+    
+    [self.view addSubview:shareBar];
     [self.navigationController setNavigationBarHidden:YES];
 }
 - (void)viewDidAppear:(BOOL)animated{
@@ -35,10 +46,6 @@
     [buttomBar.layer pop_addAnimation:animation forKey:@"slideIn"];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 - (IBAction)showQuestionView:(id)sender {
     QuestionViewController *questionView =  [self.storyboard instantiateViewControllerWithIdentifier:@"QuestionViewController"];
     [self.navigationController pushViewController:questionView animated:YES];
@@ -46,8 +53,6 @@
 }
 
 - (IBAction)shareApp:(id)sender {
-    FBLoginView *loginView = [[FBLoginView alloc] init];
-    loginView.center = self.view.center;
-    [self.view addSubview:loginView];
+    [shareBar showMe];
 }
 @end

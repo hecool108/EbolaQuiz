@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <FacebookSDK/FacebookSDK.h>
 @interface ViewController : UIViewController
 
 - (IBAction)shareApp:(id)sender;

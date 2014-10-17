@@ -13,11 +13,13 @@
 #import "TFHpple.h"
 #import "Pop.h"
 #import "BlocksKit.h"
+#import "ShareBar.h"
 @interface QuestionViewController (){
     NSMutableArray *questionsItems;
     NSMutableArray *questions;
     QuestionObject *currentQuestion;
     int questionIndex;
+    ShareBar *shareBar;
 }
 
 @end
@@ -35,6 +37,14 @@
     tableFrame = self.wrongButtonBar.frame;
     tableFrame.origin.y = self.view.frame.size.height;
     [self.wrongButtonBar setFrame:tableFrame];
+    
+    shareBar = [[ShareBar alloc] initWithFrame:CGRectMake(0, 0, 320, 160)];
+    shareBar.center = CGPointMake(self.view.center.x, self.view.frame.size.height + 80);
+    shareBar.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+    shareBar.screenH = self.view.frame.size.height;
+    shareBar.mode = ShareBarModeQuestion;
+    
+    [self.view addSubview:shareBar];
     
 }
 -(void)initView{
@@ -182,8 +192,8 @@
 }
 
 - (IBAction)shareQuestion:(id)sender {
-    
-    
+    [shareBar showMe];
+    shareBar.messageToShare = currentQuestion.subject;
 }
 - (IBAction)shareResult:(id)sender {
     

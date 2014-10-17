@@ -13,6 +13,7 @@
 		5902C39519E9296A00623218 /* OptionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5902C39419E9296A00623218 /* OptionObject.m */; };
 		598FD51A19EC1DDF00D1B64E /* OptionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 598FD51919EC1DDF00D1B64E /* OptionItem.m */; };
 		598FD51D19EC203200D1B64E /* UIGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 598FD51C19EC203200D1B64E /* UIGenerator.m */; };
+		599ABD3919F0F53600A9DF5D /* ShareBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 599ABD3819F0F53600A9DF5D /* ShareBar.m */; };
 		59D2FEFB19EABE33008D2E9F /* CDCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D2FEFA19EABE33008D2E9F /* CDCViewController.m */; };
 		59D2FEFE19EAC5E0008D2E9F /* questions.xml in Resources */ = {isa = PBXBuildFile; fileRef = 59D2FEFC19EAC5E0008D2E9F /* questions.xml */; };
 		59D2FEFF19EAC5E0008D2E9F /* TemplateIcon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59D2FEFD19EAC5E0008D2E9F /* TemplateIcon2x.png */; };
@@ -52,6 +53,8 @@
 		598FD51919EC1DDF00D1B64E /* OptionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionItem.m; sourceTree = "<group>"; };
 		598FD51B19EC203200D1B64E /* UIGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGenerator.h; sourceTree = "<group>"; };
 		598FD51C19EC203200D1B64E /* UIGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGenerator.m; sourceTree = "<group>"; };
+		599ABD3719F0F53600A9DF5D /* ShareBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareBar.h; sourceTree = "<group>"; };
+		599ABD3819F0F53600A9DF5D /* ShareBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareBar.m; sourceTree = "<group>"; };
 		59D2FEF919EABE33008D2E9F /* CDCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDCViewController.h; sourceTree = "<group>"; };
 		59D2FEFA19EABE33008D2E9F /* CDCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDCViewController.m; sourceTree = "<group>"; };
 		59D2FEFC19EAC5E0008D2E9F /* questions.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = questions.xml; sourceTree = "<group>"; };
@@ -99,6 +102,8 @@
 		59DC811319E621A400579112 = {
 			isa = PBXGroup;
 			children = (
+				599ABD3719F0F53600A9DF5D /* ShareBar.h */,
+				599ABD3819F0F53600A9DF5D /* ShareBar.m */,
 				5902C38C19E923C800623218 /* PodFile */,
 				5902C38D19E923C800623218 /* TemplateIcon2x.png */,
 				59DC811E19E621A400579112 /* EbolaQuiz */,
@@ -334,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59DC812819E621A400579112 /* ViewController.m in Sources */,
+				599ABD3919F0F53600A9DF5D /* ShareBar.m in Sources */,
 				5902C39219E9296900623218 /* QuestionObject.m in Sources */,
 				598FD51A19EC1DDF00D1B64E /* OptionItem.m in Sources */,
 				59D2FF0219EACADE008D2E9F /* QuestionViewController.m in Sources */,
