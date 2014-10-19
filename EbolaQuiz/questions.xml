@@ -5,73 +5,73 @@
         answers="2"
         desc=""
         image="">
-        <option id = "1" statement="Uhmm..."/>
-        <option id = "2" statement="No"/>
+        <option id = "1" statement="Uhmm..." image=""/>
+        <option id = "2" statement="No" image=""/>
     </question>
     <question id="2"
         subject="Are you currently bleeding out of EVERY hole you have?"
         answers="1,2"
         desc=""
         image="">
-        <option id = "1" statement="Not every hole"/>
-        <option id = "2" statement="No"/>
-        <option id = "3" statement="Yep. All of them."/>
+        <option id = "1" statement="Not every hole" image=""/>
+        <option id = "2" statement="No" image=""/>
+        <option id = "3" statement="Yep. All of them." image=""/>
     </question>
     <question id="3"
         subject="If you were in a movie, how would you be credited?"
         answers="3"
         desc=""
         image="">
-        <option id = "1" statement="Ebola patient 1"/>
-        <option id = "2" statement="Ebola patient 2"/>
-        <option id = "3" statement="Hero with no Ebola"/>
-        <option id = "4" statement="Dead Ebola guy"/>
+        <option id = "1" statement="Ebola patient 1" image=""/>
+        <option id = "2" statement="Ebola patient 2" image=""/>
+        <option id = "3" statement="Hero with no Ebola" image=""/>
+        <option id = "4" statement="Dead Ebola guy" image=""/>
     </question>
     <question id="4"
         subject="How much Ebola do you have."
         answers="4"
         desc=""
         image="">
-        <option id = "1" statement="Just a little Ebola."/>
-        <option id = "2" statement="I got a lot of Ebola."/>
-        <option id = "3" statement="A cornucopia of Ebola."/>
-        <option id = "4" statement="I don't have that yet."/>
+        <option id = "1" statement="Just a little Ebola." image=""/>
+        <option id = "2" statement="I got a lot of Ebola." image=""/>
+        <option id = "3" statement="A cornucopia of Ebola." image=""/>
+        <option id = "4" statement="I don't have that yet." image=""/>
     </question>
     <question id="5"
-        subject="If you had a disease which one would it be?"
+        subject="If you had a virus, which one would you have?"
         answers="2"
         desc=""
         image="">
-        <option id = "1" statement="Picture with Ebola."/>
-        <option id = "2" statement="Picture that says &quot;not Ebola&quot; but in virus form"/>
+        <option id = "1" statement="" image="option1.png"/>
+        <option id = "2" statement="" image="option2.png"/>
     </question>
     <question id="6"
         subject="Over 3000 people have died of Ebola this year. Are you one of them?"
         answers="1"
         desc=""
         image="">
-        <option id = "1" statement="No."/>
-        <option id = "2" statement="Damn. Yeah."/>
+        <option id = "1" statement="No." image=""/>
+        <option id = "2" statement="Damn. Yeah." image=""/>
     </question>
     <question id="7"
         subject="How often do you hang around bodily fluids of Ebola patients?"
         answers="4"
         desc=""
         image="">
-        <option id = "1" statement="Like every day."/>
-        <option id = "2" statement="Once a week."/>
-        <option id = "3" statement="Just that one time."/>
-        <option id = "4" statement="I don't hang around  bodily fluids of Ebola patients (Hint!! This is the right answer)"/>
+        <option id = "1" statement="Like every day." image=""/>
+        <option id = "2" statement="Once a week." image=""/>
+        <option id = "3" statement="Just that one time." image=""/>
+        <option id = "4" statement="I don't hang around  bodily fluids of Ebola patients (Hint!! This is the right answer)" image=""/>
     </question>
     <question id="8"
         subject="Do you breathe around Ebola people on a regular basis."
         answers="1,2,3,4"
         desc="Trick question. It's not transmitted that way doe. Just don't lick them or do gross stuff."
         image="">
-        <option id = "1" statement="Define regular."/>
-        <option id = "2" statement="Yepp."/>
-        <option id = "3" statement="Yeah but it's whatever."/>
-        <option id = "4" statement="Not even a little."/>
+        <option id = "1" statement="Define regular." image=""/>
+        <option id = "2" statement="Yepp." image=""/>
+        <option id = "3" statement="Yeah but it's whatever." image=""/>
+        <option id = "4" statement="Not even a little." image=""/>
     </question>
     <question id="9"
         subject="Trick question. It's not transmitted that way doe. Just don't lick them or do gross stuff."
@@ -84,94 +84,94 @@
         answers="1"
         desc=""
         image="">
-        <option id = "1" statement="Cool."/>
-        <option id = "2" statement="Great! Other that the throwing up and I'm super hot and I got aches every where and I can't stop doin number two and I got rashes and red eyes and and my chest hurts and I can't swallow and I'm bleeding all over the place."/>
+        <option id = "1" statement="Cool." image=""/>
+        <option id = "2" statement="Great! Other that the throwing up and I'm super hot and I got aches every where and I can't stop doin number two and I got rashes and red eyes and and my chest hurts and I can't swallow and I'm bleeding all over the place." image=""/>
     </question>
     <question id="11"
         subject="Do you have the Reston strain of Ebola?"
         answers="1"
         desc=""
         image="">
-        <option id = "1" statement="No. Only animals carry it."/>
-        <option id = "2" statement="I'm a fruitbat. And yeah, it sucks."/>
+        <option id = "1" statement="No. Only animals carry it." image=""/>
+        <option id = "2" statement="I'm a fruitbat. And yeah, it sucks." image=""/>
     </question>
     <question id="12"
         subject="Why do you butcher animals with Ebola? That's how you get Ebola!"
         answers="2"
         desc=""
         image="">
-        <option id = "1" statement="Because I'm not afraid of Ebola."/>
-        <option id = "2" statement="That wasn't me."/>
-        <option id = "3" statement="Because I have Ebola and I don't care if I get more Ebola"/>
+        <option id = "1" statement="Because I'm not afraid of Ebola." image=""/>
+        <option id = "2" statement="That wasn't me." image=""/>
+        <option id = "3" statement="Because I have Ebola and I don't care if I get more Ebola" image=""/>
     </question>
     <question id="13"
         subject="Have you ticked off any fast food workers that definitely have Ebola?"
         answers="2"
         desc=""
         image="">
-        <option id = "1" statement="Yeah. And my food tasted like spit. And Ebola."/>
-        <option id = "2" statement="Never. I respect all people."/>
+        <option id = "1" statement="Yeah. And my food tasted like spit. And Ebola." image=""/>
+        <option id = "2" statement="Never. I respect all people." image=""/>
     </question>
     <question id="14"
         subject="Have you been to West Africa and drank out of The Ebola River while hanging out with fruit bats?"
         answers="2,3"
         desc=""
         image="">
-        <option id = "1" statement="Yeah buddy like everyday"/>
-        <option id = "2" statement="No way man I don't like fruit or bats"/>
-        <option id = "3" statement="Not a good vacation spot. Nope."/>
+        <option id = "1" statement="Yeah buddy like everyday" image=""/>
+        <option id = "2" statement="No way man I don't like fruit or bats" image=""/>
+        <option id = "3" statement="Not a good vacation spot. Nope." image=""/>
     </question>
     <question id="15"
         subject="How long ago did that Ebola guy spit in your eye?"
         answers="1,2"
         desc=""
         image="">
-        <option id = "1" statement="That didn't happen."/>
-        <option id = "2" statement="more than 21 days ago. Still no Ebolas!"/>
-        <option id = "3" statement="Less than 21 days ago."/>
+        <option id = "1" statement="That didn't happen." image=""/>
+        <option id = "2" statement="more than 21 days ago. Still no Ebolas!" image=""/>
+        <option id = "3" statement="Less than 21 days ago." image=""/>
     </question>
     <question id="16"
         subject="Did you eat some sketchy vegetables and now you can't get off the toilet?"
         answers="1,2,3"
         desc=""
         image="">
-        <option id = "1" statement="That's E.Coli. Not Ebola."/>
-        <option id = "2" statement="Yes."/>
-        <option id = "3" statement="No."/>
+        <option id = "1" statement="That's E.Coli. Not Ebola." image=""/>
+        <option id = "2" statement="Yes." image=""/>
+        <option id = "3" statement="No." image=""/>
     </question>
     <question id="17"
         subject="What's more contagious? Measles or Ebola?"
         answers="1,3"
         desc=""
         image="">
-        <option id = "1" statement="Measles. It actually is."/>
-        <option id = "2" statement="I think Ebola, because I have it now, not because I know science."/>
-        <option id = "3" statement="Love."/>
+        <option id = "1" statement="Measles. It actually is." image=""/>
+        <option id = "2" statement="I think Ebola, because I have it now, not because I know science." image=""/>
+        <option id = "3" statement="Love." image=""/>
     </question>
     <question id="18"
         subject="A guy with Ebola just dropped a Dorito out of his mouth. Did you eat it?"
         answers="2"
         desc=""
         image="">
-        <option id = "1" statement="Yeah! 5 second rule!"/>
-        <option id = "2" statement="No way."/>
+        <option id = "1" statement="Yeah! 5 second rule!" image=""/>
+        <option id = "2" statement="No way." image=""/>
     </question>
     <question id="19"
         subject="I don't have Ebola"
         answers="1"
         desc=""
         image="">
-        <option id = "1" statement="True"/>
-        <option id = "2" statement="False"/>
+        <option id = "1" statement="True" image=""/>
+        <option id = "2" statement="False" image=""/>
     </question>
     <question id="20"
         subject="Fill in the blank. I have _____"
         answers="2,3,4"
         desc=""
         image="">
-        <option id = "1" statement="EVD"/>
-        <option id = "2" statement="No life"/>
-        <option id = "3" statement="Many friends"/>
-        <option id = "4" statement="A strong set of skills that are immensely undervalued"/>
+        <option id = "1" statement="EVD" image=""/>
+        <option id = "2" statement="No life" image=""/>
+        <option id = "3" statement="Many friends" image=""/>
+        <option id = "4" statement="A strong set of skills that are immensely undervalued" image=""/>
     </question>
 </qs>

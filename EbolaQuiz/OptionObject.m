@@ -14,6 +14,7 @@
     if (self) {
         self.id = [[xmlElement attributes] objectForKey:@"id"];
         self.statement = [[xmlElement attributes] objectForKey:@"statement"];
+        self.imageName = [[xmlElement attributes] objectForKey:@"image"];
     }
     return self;
 }

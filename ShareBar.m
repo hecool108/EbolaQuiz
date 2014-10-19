@@ -12,6 +12,7 @@
 @interface ShareBar(){
     FBLoginView *faceBookLoginButton;
     UIButton *faceBookShareButton;
+    UIButton *twitterShareButton;
 }
 @end
 @implementation ShareBar
@@ -56,8 +57,21 @@
         faceBookLoginButton.center = CGPointMake(self.center.x, 9+23);
         [self addSubview:faceBookLoginButton];
     }
+    if (twitterShareButton == nil) {
+        twitterShareButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        twitterShareButton.frame = CGRectMake(0, 0, 218, 46);
+        [twitterShareButton setBackgroundImage:[UIImage imageNamed:@"shareTwitterButton"] forState:UIControlStateNormal];
+        twitterShareButton.center = CGPointMake(self.center.x, 9+23+46+3);
+        [twitterShareButton addTarget:self action:@selector(shareToTwitter:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:twitterShareButton];
+    }
+    
 }
-
+- (void)shareToTwitter:(id)sender{
+    NSString *stringURL = @"twitter://post?message=If%20you%20want%20to%20know%20facts%20about%20Ebola%2C%20Search%20EbolaQuiz%20in%20App%20Store&imageURL";
+    NSURL *url = [NSURL URLWithString:stringURL];
+    [[UIApplication sharedApplication] openURL:url];
+}
 - (void)shareToFaceBook:(id)sender{
     FBLinkShareParams *params = [[FBLinkShareParams alloc] init];
     

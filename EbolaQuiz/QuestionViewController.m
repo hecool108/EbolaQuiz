@@ -14,12 +14,14 @@
 #import "Pop.h"
 #import "BlocksKit.h"
 #import "ShareBar.h"
+#import "VirusGenerator.h"
 @interface QuestionViewController (){
     NSMutableArray *questionsItems;
     NSMutableArray *questions;
     QuestionObject *currentQuestion;
     int questionIndex;
     ShareBar *shareBar;
+    VirusGenerator *virusGenerator;
 }
 
 @end
@@ -45,13 +47,23 @@
     shareBar.mode = ShareBarModeQuestion;
     
     [self.view addSubview:shareBar];
+    virusGenerator = [[VirusGenerator alloc] initWithFrame:self.view.frame];
+    [self.view insertSubview:virusGenerator atIndex:0];
     
+}
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [virusGenerator initVirusNumbers:8 + arc4random_uniform(5)];
+}
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [virusGenerator stopAndRemoveAll];
 }
 -(void)initView{
     questionsItems = [NSMutableArray array];
     for (int i = 0; i < 4; i++) {
         OptionItem *optionItem = [[OptionItem alloc] initWithFrame:CGRectMake(10, 120+i*60, 300, 50)];
-        optionItem.backgroundColor = [UIColor grayColor];
+        optionItem.backgroundColor = [UIColor whiteColor];
         [self.view addSubview:optionItem];
         [questionsItems addObject:optionItem];
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTap:)];
@@ -160,12 +172,6 @@
    
     POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
     animation.toValue = @(60-(self.questionLabel.numberOfLines-1)*20);
-//    if ([currentQuestion.type isEqualToString:@"optional"]) {
-//        
-//    }else
-//    {
-//        animation.toValue = @(150);
-//    }    
     [self.questionLabel.layer pop_addAnimation:animation forKey:@"adjustQuestionLabel"];
     
     for (int i = 0; i < 4; i++) {
@@ -184,7 +190,6 @@
             OptionItem *item = [questionsItems objectAtIndex:i];
             POPSpringAnimation *animationAdaptY = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
             animationAdaptY.toValue = @(yTo + item.hTo/2);
-            NSLog(@"%f",item.hTo);
             [item.layer pop_addAnimation:animationAdaptY forKey:@"animationAdaptY"];
             yTo += item.frame.size.height + 10;
         }
