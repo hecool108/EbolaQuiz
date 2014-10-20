@@ -17,6 +17,7 @@
 @property (nonatomic, retain) NSMutableArray *options;
 @property (nonatomic, retain) NSArray *answers;
 @property (nonatomic, retain) NSString *type;
+@property (nonatomic, retain) NSString *imageName;
 
 - (id)initWithTFHppleElement:(TFHppleElement *)xmlElement;
 -(BOOL)isRight:(NSString *)answer;

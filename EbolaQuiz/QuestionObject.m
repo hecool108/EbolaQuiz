@@ -17,6 +17,7 @@
         self.id = [[xmlElement attributes] objectForKey:@"id"];
         self.subject = [[xmlElement attributes] objectForKey:@"subject"];
         self.desc = [[xmlElement attributes] objectForKey:@"desc"];
+        self.imageName = [[xmlElement attributes] objectForKey:@"image"];
         NSString *answerString = [[xmlElement attributes] objectForKey:@"answers"];
         if ([answerString isEqualToString:@"desc"]) {
             self.type = @"desc";

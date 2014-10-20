@@ -18,10 +18,12 @@
 @interface QuestionViewController (){
     NSMutableArray *questionsItems;
     NSMutableArray *questions;
+    UIImageView *questionImage;
     QuestionObject *currentQuestion;
     int questionIndex;
     ShareBar *shareBar;
     VirusGenerator *virusGenerator;
+    float optionYStart;
 }
 
 @end
@@ -174,6 +176,19 @@
     animation.toValue = @(60-(self.questionLabel.numberOfLines-1)*20);
     [self.questionLabel.layer pop_addAnimation:animation forKey:@"adjustQuestionLabel"];
     
+    if (questionImage != nil) {
+        [questionImage removeFromSuperview];
+        questionImage = nil;
+    }
+    optionYStart = 120.0f;
+    if (![currentQuestion.imageName isEqualToString:@""]) {
+        questionImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:currentQuestion.imageName]];
+        CGRect theRect = CGRectMake(30, optionYStart, questionImage.image.size.width, questionImage.image.size.height);
+        questionImage.frame = theRect;
+        [self.view addSubview:questionImage];
+        optionYStart += questionImage.image.size.height + 10;
+    }
+    
     for (int i = 0; i < 4; i++) {
         OptionItem *item = [questionsItems objectAtIndex:i];
         if (i < currentQuestion.options.count) {
@@ -185,13 +200,13 @@
         }
     }
     [NSTimer bk_performBlock:^{
-        float yTo = 120.0f;
+        
         for (int i = 0; i < 4; i++) {
             OptionItem *item = [questionsItems objectAtIndex:i];
             POPSpringAnimation *animationAdaptY = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
-            animationAdaptY.toValue = @(yTo + item.hTo/2);
+            animationAdaptY.toValue = @(optionYStart + item.hTo/2);
             [item.layer pop_addAnimation:animationAdaptY forKey:@"animationAdaptY"];
-            yTo += item.frame.size.height + 10;
+            optionYStart += item.frame.size.height + 10;
         }
     } afterDelay:0.2];
 }

@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <qs>
+    <question id="101"
+        subject="when you were in band, did you accidentally play The Ebola?"
+        answers="1,2"
+        desc=""
+        image="question1.png">
+        <option id = "1" statement="Nah, I wasn't in band" image=""/>
+        <option id = "2" statement="I played the bassoon. " image=""/>
+        <option id = "3" statement="Yeah that's me!" image=""/>
+    </question>
     <question id="1"
         subject="Do you have Ebola?"
         answers="2"
@@ -36,6 +45,15 @@
         <option id = "2" statement="I got a lot of Ebola." image=""/>
         <option id = "3" statement="A cornucopia of Ebola." image=""/>
         <option id = "4" statement="I don't have that yet." image=""/>
+    </question>
+    <question id="101"
+        subject="when you were in band, did you accidentally play The Ebola?"
+        answers="1,2"
+        desc=""
+        image="question1.png">
+        <option id = "1" statement="Nah, I wasn't in band" image=""/>
+        <option id = "2" statement="I played the bassoon. " image=""/>
+        <option id = "3" statement="Yeah that's me!" image=""/>
     </question>
     <question id="5"
         subject="If you had a virus, which one would you have?"
