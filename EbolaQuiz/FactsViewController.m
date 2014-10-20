@@ -8,7 +8,10 @@
 
 #import "FactsViewController.h"
 
-@interface FactsViewController ()
+@interface FactsViewController (){
+    NSMutableArray *facts;
+}
+@property (strong, nonatomic) IBOutlet UILabel *factLabel;
 
 @end
 
@@ -16,22 +19,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+//    questions = [NSMutableArray array];
+//    NSError *error;
+//    NSString *str=[[NSBundle mainBundle] pathForResource:@"questions" ofType:@"xml"];
+//    NSData *data = [NSData dataWithContentsOfFile:str options:NSDataReadingMapped error:&error];
+//    TFHpple * doc       = [[TFHpple alloc] initWithHTMLData:data];
+//    NSArray *elements  = [doc searchWithXPathQuery:@"//question"];
+//    for (int i = 0; i < elements.count; i++) {
+//        TFHppleElement *ele = elements[i];
+//        [questions addObject:[[QuestionObject alloc] initWithTFHppleElement:ele]];
+//    }
+    
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
