@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5902C38E19E923C800623218 /* PodFile in Resources */ = {isa = PBXBuildFile; fileRef = 5902C38C19E923C800623218 /* PodFile */; };
-		5902C38F19E923C800623218 /* TemplateIcon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5902C38D19E923C800623218 /* TemplateIcon2x.png */; };
 		5902C39219E9296900623218 /* QuestionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5902C39119E9296900623218 /* QuestionObject.m */; };
 		5902C39519E9296A00623218 /* OptionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5902C39419E9296A00623218 /* OptionObject.m */; };
 		59739BE919F3FC8A00ED6D6B /* VirusGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 59739BE719F3FC8A00ED6D6B /* VirusGenerator.m */; };
 		59739BEF19F3FD0800ED6D6B /* UIGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 59739BEE19F3FD0800ED6D6B /* UIGenerator.m */; };
+		598F754119F4D26E005CEB17 /* facts.xml in Resources */ = {isa = PBXBuildFile; fileRef = 598F754019F4D26E005CEB17 /* facts.xml */; };
+		598F754419F4D682005CEB17 /* FactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 598F754319F4D682005CEB17 /* FactsViewController.m */; };
 		598FD51A19EC1DDF00D1B64E /* OptionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 598FD51919EC1DDF00D1B64E /* OptionItem.m */; };
 		599ABD3919F0F53600A9DF5D /* ShareBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 599ABD3819F0F53600A9DF5D /* ShareBar.m */; };
 		59BAC56519F3B0F9004031E5 /* FloatingVirus.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BAC56419F3B0F9004031E5 /* FloatingVirus.m */; };
@@ -46,7 +47,6 @@
 		346513C28C70C3031F4A8C24 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		39228E505F988A386BEB95A8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5902C38C19E923C800623218 /* PodFile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PodFile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		5902C38D19E923C800623218 /* TemplateIcon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TemplateIcon2x.png; sourceTree = "<group>"; };
 		5902C39019E9296900623218 /* QuestionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionObject.h; sourceTree = "<group>"; };
 		5902C39119E9296900623218 /* QuestionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionObject.m; sourceTree = "<group>"; };
 		5902C39319E9296A00623218 /* OptionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionObject.h; sourceTree = "<group>"; };
@@ -55,10 +55,13 @@
 		59739BE819F3FC8A00ED6D6B /* VirusGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirusGenerator.h; sourceTree = "<group>"; };
 		59739BED19F3FD0800ED6D6B /* UIGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGenerator.h; sourceTree = "<group>"; };
 		59739BEE19F3FD0800ED6D6B /* UIGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGenerator.m; sourceTree = "<group>"; };
+		598F754019F4D26E005CEB17 /* facts.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = facts.xml; sourceTree = "<group>"; };
+		598F754219F4D682005CEB17 /* FactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FactsViewController.h; sourceTree = "<group>"; };
+		598F754319F4D682005CEB17 /* FactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FactsViewController.m; sourceTree = "<group>"; };
 		598FD51819EC1DDF00D1B64E /* OptionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionItem.h; sourceTree = "<group>"; };
 		598FD51919EC1DDF00D1B64E /* OptionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionItem.m; sourceTree = "<group>"; };
-		599ABD3719F0F53600A9DF5D /* ShareBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareBar.h; sourceTree = "<group>"; };
-		599ABD3819F0F53600A9DF5D /* ShareBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareBar.m; sourceTree = "<group>"; };
+		599ABD3719F0F53600A9DF5D /* ShareBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareBar.h; path = ../ShareBar.h; sourceTree = "<group>"; };
+		599ABD3819F0F53600A9DF5D /* ShareBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareBar.m; path = ../ShareBar.m; sourceTree = "<group>"; };
 		59BAC56319F3B0F9004031E5 /* FloatingVirus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatingVirus.h; sourceTree = "<group>"; };
 		59BAC56419F3B0F9004031E5 /* FloatingVirus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatingVirus.m; sourceTree = "<group>"; };
 		59D2FEF919EABE33008D2E9F /* CDCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDCViewController.h; sourceTree = "<group>"; };
@@ -108,10 +111,7 @@
 		59DC811319E621A400579112 = {
 			isa = PBXGroup;
 			children = (
-				599ABD3719F0F53600A9DF5D /* ShareBar.h */,
-				599ABD3819F0F53600A9DF5D /* ShareBar.m */,
 				5902C38C19E923C800623218 /* PodFile */,
-				5902C38D19E923C800623218 /* TemplateIcon2x.png */,
 				59DC811E19E621A400579112 /* EbolaQuiz */,
 				59DC813819E621A500579112 /* EbolaQuizTests */,
 				59DC811D19E621A400579112 /* Products */,
@@ -132,6 +132,8 @@
 		59DC811E19E621A400579112 /* EbolaQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				599ABD3719F0F53600A9DF5D /* ShareBar.h */,
+				599ABD3819F0F53600A9DF5D /* ShareBar.m */,
 				59DC812319E621A400579112 /* AppDelegate.h */,
 				59DC812419E621A400579112 /* AppDelegate.m */,
 				59739BED19F3FD0800ED6D6B /* UIGenerator.h */,
@@ -161,6 +163,9 @@
 				59E72EDC19ECFD360002D55A /* WrongAnswerViewController.m */,
 				59BAC56319F3B0F9004031E5 /* FloatingVirus.h */,
 				59BAC56419F3B0F9004031E5 /* FloatingVirus.m */,
+				598F754019F4D26E005CEB17 /* facts.xml */,
+				598F754219F4D682005CEB17 /* FactsViewController.h */,
+				598F754319F4D682005CEB17 /* FactsViewController.m */,
 			);
 			path = EbolaQuiz;
 			sourceTree = "<group>";
@@ -292,8 +297,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5902C38E19E923C800623218 /* PodFile in Resources */,
+				598F754119F4D26E005CEB17 /* facts.xml in Resources */,
 				59D2FEFE19EAC5E0008D2E9F /* questions.xml in Resources */,
-				5902C38F19E923C800623218 /* TemplateIcon2x.png in Resources */,
 				59DC812B19E621A400579112 /* Main.storyboard in Resources */,
 				59DC813019E621A400579112 /* LaunchScreen.xib in Resources */,
 				59DC812D19E621A400579112 /* Images.xcassets in Resources */,
@@ -353,6 +358,7 @@
 				59739BE919F3FC8A00ED6D6B /* VirusGenerator.m in Sources */,
 				5902C39219E9296900623218 /* QuestionObject.m in Sources */,
 				598FD51A19EC1DDF00D1B64E /* OptionItem.m in Sources */,
+				598F754419F4D682005CEB17 /* FactsViewController.m in Sources */,
 				59D2FF0219EACADE008D2E9F /* QuestionViewController.m in Sources */,
 				59DC812519E621A400579112 /* AppDelegate.m in Sources */,
 				59739BEF19F3FD0800ED6D6B /* UIGenerator.m in Sources */,
