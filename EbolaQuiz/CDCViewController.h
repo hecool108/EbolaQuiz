@@ -10,4 +10,5 @@
 
 @interface CDCViewController : UIViewController
 
+- (IBAction)safariIt:(id)sender;
 @end

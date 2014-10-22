@@ -24,6 +24,7 @@
     ShareBar *shareBar;
     VirusGenerator *virusGenerator;
     float optionYStart;
+    BOOL winOnShow;
 }
 
 @end
@@ -33,6 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     questionIndex = 0;
+    winOnShow = NO;
     [self initQuestions];
     [self initView];
     CGRect tableFrame = self.questionButtonBar.frame;
@@ -47,7 +49,6 @@
     shareBar.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
     shareBar.screenH = self.view.frame.size.height;
     shareBar.mode = ShareBarModeQuestion;
-    
     [self.view addSubview:shareBar];
     virusGenerator = [[VirusGenerator alloc] initWithFrame:self.view.frame];
     [self.view insertSubview:virusGenerator atIndex:0];
@@ -98,6 +99,18 @@
     animation.toValue = @(-100);
     [self.wrongAleartLabel.layer pop_addAnimation:animation forKey:@"hideWrongAnsewerAlert"];
 }
+-(void)showWinAlert{
+    POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+    animation.toValue = @(100);
+    [self.winLabel.layer pop_addAnimation:animation forKey:@"showWinAlert"];
+    winOnShow = YES;
+}
+-(void)hideWinAlert{
+    POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+    animation.toValue = @(-150);
+    [self.winLabel.layer pop_addAnimation:animation forKey:@"hideWinAlert"];
+    winOnShow = NO;
+}
 -(void)showQuestionLabel{
     POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
     animation.toValue = @(90);
@@ -129,11 +142,17 @@
     [self.questionButtonBar.layer pop_addAnimation:animation forKey:@"hideWrongAnsewerButtonBar"];
 }
 -(void)showAllItem{
+    if (questionImage) {
+        [questionImage setHidden:NO];
+    }
     for (OptionItem *item in questionsItems) {
         [item setHidden:NO];
     }
 }
 -(void)hideAllItem{
+    if (questionImage) {
+        [questionImage setHidden:YES];
+    }
     for (OptionItem *item in questionsItems) {
         [item setHidden:YES];
     }
@@ -154,9 +173,16 @@
 -(void)nextQuestion{
     if (questionIndex + 1 < questions.count) {
         questionIndex++;
+        currentQuestion = questions[questionIndex];
+        [self showQuestion];
+    }else
+    {
+        [self showWinAlert];
+        [self showWrongAnsewerButtonBar];
+        [self hideQuestionButtonBar];
+        [self hideQuestionLabel];
+        [self hideAllItem];
     }
-    currentQuestion = questions[questionIndex];
-    [self showQuestion];
 }
 -(void)prevQuestion{
     if (questionIndex - 1 >= 0) {
@@ -219,11 +245,25 @@
     
 }
 - (IBAction)letMeTryAgain:(id)sender {
-    [self hideWrongAnsewerAlert];
-    [self hideWrongAnsewerButtonBar];
-    [self showQuestionButtonBar];
-    [self showQuestionLabel];
-    [self showAllItem];
+    if (winOnShow) {
+        questionIndex = 0;
+        currentQuestion = questions[questionIndex];
+        [self hideWinAlert];
+        [self hideWrongAnsewerButtonBar];
+        [self showQuestionButtonBar];
+        [self showQuestionLabel];
+        [self showAllItem];
+        [self showQuestion];
+    }else
+    {
+        [self hideWinAlert];
+        [self hideWrongAnsewerAlert];
+        [self hideWrongAnsewerButtonBar];
+        [self showQuestionButtonBar];
+        [self showQuestionLabel];
+        [self showAllItem];
+    }
+    
 }
 
 - (IBAction)backToMain:(id)sender {

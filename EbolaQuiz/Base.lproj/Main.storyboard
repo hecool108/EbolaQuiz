@@ -13,10 +13,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" id="7Qa-bw-nIe">
-                                <rect key="frame" x="52" y="28" width="217" height="210"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2iQ-G3-MS4">
                                 <rect key="frame" x="67" y="252" width="187" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -38,7 +34,7 @@
                                         <rect key="frame" x="36" y="17" width="110" height="59"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.71764707565307617" green="0.89019614458084106" blue="0.93333339691162109" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="textColor" red="0.023495370370370371" green="0.74401041666666667" blue="0.90541087962962752" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hN2-Ph-24L">
@@ -75,7 +71,14 @@
                                     <color key="titleColor" red="0.66466126824817517" green="0.9647059440612793" blue="0.70196080207824707" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" red="0.14469437213665337" green="0.80000398596938771" blue="0.33596221817933436" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="showFacts:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dPg-iZ-HQw"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" id="7Qa-bw-nIe">
+                                <rect key="frame" x="58" y="30" width="205.5" height="146"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -95,10 +98,48 @@
             </objects>
             <point key="canvasLocation" x="507" y="128"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="sDU-h3-EJS">
+            <objects>
+                <pageViewController storyboardIdentifier="EQPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="3py-bq-GkY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E0y-Md-Ior" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886" y="-531"/>
+        </scene>
         <!--Facts View Controller-->
+        <scene sceneID="gA8-ui-kf7">
+            <objects>
+                <viewController storyboardIdentifier="FactsViewController" id="vCg-Ji-TgE" customClass="FactsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7as-eV-lvm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ERa-D7-MWx">
+                                <rect key="frame" x="185" y="483" width="119" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Share this fact">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareFact:" destination="vCg-Ji-TgE" eventType="touchUpInside" id="dkX-tp-d4E"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="shareButton" destination="ERa-D7-MWx" id="udN-tA-ye6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gpz-rH-xbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1292" y="-531"/>
+        </scene>
+        <!--Single Fact View Controller-->
         <scene sceneID="q3B-4Y-y4A">
             <objects>
-                <viewController storyboardIdentifier="FactsViewController" id="Uf7-VY-VJv" customClass="FactsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SingleFactViewController" id="Uf7-VY-VJv" customClass="SingleFactViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vkr-vN-H6W">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,6 +153,13 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="3" height="-1"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R0a-hf-mwY">
+                                <rect key="frame" x="35" y="99" width="250" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -121,12 +169,12 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="factLabel" destination="Ma5-cD-zGa" id="SVO-bc-avD"/>
+                        <outlet property="factLabel" destination="R0a-hf-mwY" id="QHE-8H-RO0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2if-bK-IPh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="886" y="-513"/>
+            <point key="canvasLocation" x="1707" y="-531"/>
         </scene>
         <!--Question View Controller-->
         <scene sceneID="biu-iB-DBI">
@@ -227,7 +275,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3Dx-Li-x9H">
-                                <rect key="frame" x="21" y="58" width="279" height="65"/>
+                                <rect key="frame" x="21" y="89" width="279" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -236,6 +284,19 @@
                                     <action selector="questionLabelTap:" destination="M4f-2f-k3l" eventType="touchUpInside" id="Je6-bf-5yh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8eq-3k-Bcw">
+                                <rect key="frame" x="57" y="-144" width="206" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">E Boo-yah.Get out of here
+Ebola. You're Ebola free!
+Consider yourself lucky,
+there are only
+7000148991 people left
+in the world without Ebola.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -247,6 +308,7 @@
                     <connections>
                         <outlet property="questionButtonBar" destination="iwD-l6-HTq" id="aYw-dI-qzh"/>
                         <outlet property="questionLabel" destination="bCy-ch-xkJ" id="von-4t-Cvu"/>
+                        <outlet property="winLabel" destination="8eq-3k-Bcw" id="kVA-Kf-ttP"/>
                         <outlet property="wrongAleartLabel" destination="wn8-zM-Vvk" id="mei-Px-aat"/>
                         <outlet property="wrongButtonBar" destination="sGF-Tm-dxy" id="oXL-ns-U5m"/>
                     </connections>
@@ -281,6 +343,17 @@
                                         </state>
                                         <connections>
                                             <action selector="backToQuiz:" destination="zKh-6I-p32" eventType="touchUpInside" id="nOe-01-SsE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ywt-qh-Yw7">
+                                        <rect key="frame" x="8" y="26" width="53" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Safari it">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="safariIt:" destination="zKh-6I-p32" eventType="touchUpInside" id="f4e-TF-b2E"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -323,7 +396,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="title" width="217" height="210"/>
+        <image name="title" width="205" height="146"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

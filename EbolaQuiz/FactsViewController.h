@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface FactsViewController : UIViewController
+- (IBAction)shareFact:(id)sender;
 
+
+@property (strong, nonatomic) IBOutlet UIButton *shareButton;
 @end

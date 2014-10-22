@@ -18,6 +18,7 @@
 		599ABD3919F0F53600A9DF5D /* ShareBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 599ABD3819F0F53600A9DF5D /* ShareBar.m */; };
 		59BAC56519F3B0F9004031E5 /* FloatingVirus.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BAC56419F3B0F9004031E5 /* FloatingVirus.m */; };
 		59CDBD1419F5297E00C27213 /* FactObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 59CDBD1319F5297E00C27213 /* FactObject.m */; };
+		59D1CDF219F7530100D29821 /* SingleFactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D1CDF119F7530100D29821 /* SingleFactViewController.m */; };
 		59D2FEFB19EABE33008D2E9F /* CDCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D2FEFA19EABE33008D2E9F /* CDCViewController.m */; };
 		59D2FEFE19EAC5E0008D2E9F /* questions.xml in Resources */ = {isa = PBXBuildFile; fileRef = 59D2FEFC19EAC5E0008D2E9F /* questions.xml */; };
 		59D2FEFF19EAC5E0008D2E9F /* TemplateIcon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59D2FEFD19EAC5E0008D2E9F /* TemplateIcon2x.png */; };
@@ -67,6 +68,8 @@
 		59BAC56419F3B0F9004031E5 /* FloatingVirus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatingVirus.m; sourceTree = "<group>"; };
 		59CDBD1219F5297E00C27213 /* FactObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FactObject.h; sourceTree = "<group>"; };
 		59CDBD1319F5297E00C27213 /* FactObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FactObject.m; sourceTree = "<group>"; };
+		59D1CDF019F7530100D29821 /* SingleFactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleFactViewController.h; sourceTree = "<group>"; };
+		59D1CDF119F7530100D29821 /* SingleFactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleFactViewController.m; sourceTree = "<group>"; };
 		59D2FEF919EABE33008D2E9F /* CDCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDCViewController.h; sourceTree = "<group>"; };
 		59D2FEFA19EABE33008D2E9F /* CDCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDCViewController.m; sourceTree = "<group>"; };
 		59D2FEFC19EAC5E0008D2E9F /* questions.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = questions.xml; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 				59E72EDC19ECFD360002D55A /* WrongAnswerViewController.m */,
 				59CDBD1219F5297E00C27213 /* FactObject.h */,
 				59CDBD1319F5297E00C27213 /* FactObject.m */,
+				59D1CDF019F7530100D29821 /* SingleFactViewController.h */,
+				59D1CDF119F7530100D29821 /* SingleFactViewController.m */,
 			);
 			path = EbolaQuiz;
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 				599ABD3919F0F53600A9DF5D /* ShareBar.m in Sources */,
 				59739BE919F3FC8A00ED6D6B /* VirusGenerator.m in Sources */,
 				5902C39219E9296900623218 /* QuestionObject.m in Sources */,
+				59D1CDF219F7530100D29821 /* SingleFactViewController.m in Sources */,
 				598FD51A19EC1DDF00D1B64E /* OptionItem.m in Sources */,
 				598F754419F4D682005CEB17 /* FactsViewController.m in Sources */,
 				59D2FF0219EACADE008D2E9F /* QuestionViewController.m in Sources */,

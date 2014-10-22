@@ -13,6 +13,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *wrongAleartLabel;
 @property (strong, nonatomic) IBOutlet UIView *wrongButtonBar;
 @property (strong, nonatomic) IBOutlet UIView *questionButtonBar;
+@property (strong, nonatomic) IBOutlet UILabel *winLabel;
 
 
 - (IBAction)shareQuestion:(id)sender;

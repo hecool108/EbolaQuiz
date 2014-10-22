@@ -16,7 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [NSThread sleepForTimeInterval:2.0];
+    [NSThread sleepForTimeInterval:2.5];
     [FBLoginView class];
     return YES;
 }

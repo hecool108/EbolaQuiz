@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <qs>
-    <question id="101"
-        subject="when you were in band, did you accidentally play The Ebola?"
-        answers="1,2"
-        desc=""
-        image="question1.png">
-        <option id = "1" statement="Nah, I wasn't in band" image=""/>
-        <option id = "2" statement="I played the bassoon. " image=""/>
-        <option id = "3" statement="Yeah that's me!" image=""/>
-    </question>
     <question id="1"
         subject="Do you have Ebola?"
         answers="2"
@@ -98,7 +89,6 @@
         <option id = "1" statement="That's not me fool." image=""/>
         <option id = "2" statement="It was a dare." image=""/>
         <option id = "3" statement="That may look like me but I swear it's not." image=""/>
-        <option id = "4" statement="It looked super groovy at the barber shop." image=""/>
     </question>
     <question id="8"
         subject="Do you breathe around Ebola people on a regular basis."
@@ -112,9 +102,10 @@
     </question>
     <question id="9"
         subject="Trick question. It's not transmitted that way doe. Just don't lick them or do gross stuff."
-        answers="desc"
+        answers="1"
         desc=""
         image="">
+        <option id = "1" statement="Go on." image=""/>
     </question>
     <question id="10"
         subject="How are you feeling today?"

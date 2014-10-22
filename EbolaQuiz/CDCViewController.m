@@ -22,7 +22,7 @@
 }
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.cdc.gov"]]];
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@" https://forms.logiforms.com/formdata/user_forms/9580_18629/78456/page1.html?cachebust=716"]]];
 }
 -(void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
@@ -47,4 +47,9 @@
 }
 */
 
+- (IBAction)safariIt:(id)sender {
+    NSString *stringURL = @"https://forms.logiforms.com/formdata/user_forms/9580_18629/78456/page1.html?cachebust=716";
+    NSURL *url = [NSURL URLWithString:stringURL];
+    [[UIApplication sharedApplication] openURL:url];
+}
 @end

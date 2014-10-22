@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "QuestionViewController.h"
+#import "FactsViewController.h"
 #import "Pop.h"
 #import "AppDelegate.h"
 #import "ShareBar.h"
@@ -22,6 +23,8 @@
     __weak IBOutlet UIView *buttomBar;
     FBLoginView *fbLoginView;
     VirusGenerator *virusGenerator;
+    QuestionViewController *questionView;
+    FactsViewController *factsView;
 }
 
 @end
@@ -57,9 +60,17 @@
 }
 
 - (IBAction)showQuestionView:(id)sender {
-    QuestionViewController *questionView =  [self.storyboard instantiateViewControllerWithIdentifier:@"QuestionViewController"];
+    if (questionView == nil) {
+        questionView =  [self.storyboard instantiateViewControllerWithIdentifier:@"QuestionViewController"];
+    }
     [self.navigationController pushViewController:questionView animated:YES];
     
+}
+- (IBAction)showFacts:(id)sender {
+    if (factsView == nil) {
+        factsView = [self.storyboard instantiateViewControllerWithIdentifier:@"FactsViewController"];
+    }
+    [self.navigationController pushViewController:factsView animated:YES];
 }
 
 - (IBAction)shareApp:(id)sender {

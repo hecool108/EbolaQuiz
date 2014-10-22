@@ -21,7 +21,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         optionLabel = [UIGenerator createSystemLabel:CGRectMake(20, 0, 280, 50) size:20
-                                               color:[UIColor colorWithRed:0.565 green:0.906 blue:0.776 alpha:1]
+                                               color:[UIColor colorWithRed:0.792 green:0.2 blue:0.631 alpha:1]
                                                align:NSTextAlignmentLeft];
         [self addSubview:optionLabel];
         self.alpha = 0;
