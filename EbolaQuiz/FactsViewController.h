@@ -10,6 +10,7 @@
 
 @interface FactsViewController : UIViewController
 - (IBAction)shareFact:(id)sender;
+- (IBAction)backToMain:(id)sender;
 
 
 @property (strong, nonatomic) IBOutlet UIButton *shareButton;

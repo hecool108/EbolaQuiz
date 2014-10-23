@@ -125,6 +125,30 @@
                                     <action selector="shareFact:" destination="vCg-Ji-TgE" eventType="touchUpInside" id="dkX-tp-d4E"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Svc-FP-0q4">
+                                <rect key="frame" x="61" y="19" width="187" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="ebola facts">
+                                    <color key="titleColor" red="0.66466126820000004" green="0.96470594409999999" blue="0.7019608021" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" red="0.1446943721" green="0.800003986" blue="0.3359622182" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showFacts:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="K6H-TI-mO3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pzh-Z5-rum">
+                                <rect key="frame" x="265" y="24" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToMain:" destination="vCg-Ji-TgE" eventType="touchUpInside" id="vGe-yW-Id5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

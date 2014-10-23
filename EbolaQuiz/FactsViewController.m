@@ -121,4 +121,8 @@
     shareBar.messageToShare = currentFact.subject;
     [shareBar showMe];
 }
+
+- (IBAction)backToMain:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 @end
