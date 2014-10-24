@@ -136,7 +136,7 @@
         subject="Have you ticked off any fast food workers that definitely have Ebola?"
         answers="2"
         desc=""
-        image="">
+        image="question13">
         <option id = "1" statement="Yeah. And my food tasted like spit. And Ebola." image=""/>
         <option id = "2" statement="Never. I respect all people." image=""/>
     </question>

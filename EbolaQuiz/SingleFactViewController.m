@@ -26,7 +26,7 @@
         [self.view addSubview:_factLabel];
         if (![_factData.imageName isEqualToString:@""]) {
             UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:_factData.imageName]];
-            imageView.center = CGPointMake(self.view.center.x, imageView.image.size.height/2 + 50);
+            imageView.center = CGPointMake(self.view.center.x, imageView.image.size.height/2 + 100);
             [self.view addSubview:imageView];
             CGRect labelRect = self.factLabel.frame;
             labelRect.origin.y = imageView.frame.size.height + imageView.frame.origin.y + 10;
