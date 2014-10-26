@@ -25,7 +25,7 @@
         [self initShareButtons];
         UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeSystem];
         closeButton.backgroundColor = [UIColor whiteColor];
-        [closeButton setTitle:@"关  闭" forState:UIControlStateNormal];
+        [closeButton setTitle:@"Cancel" forState:UIControlStateNormal];
         closeButton.frame = CGRectMake(51, 108.5, 218, 46);
         [closeButton addTarget:self action:@selector(closeMe:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:closeButton];

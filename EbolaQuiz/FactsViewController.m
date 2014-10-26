@@ -29,9 +29,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    CGRect theFrame = self.shareButton.frame;
-    theFrame.origin.y = self.view.frame.size.height - 65 - 10;
-    self.shareButton.frame = theFrame;
+//    CGRect theFrame = self.shareButton.frame;
+//    theFrame.origin.y = self.view.frame.size.height - 65 - 10;
+//    self.shareButton.frame = theFrame;
     facts = [NSMutableArray array];
     NSError *error;
     NSString *str=[[NSBundle mainBundle] pathForResource:@"facts" ofType:@"xml"];

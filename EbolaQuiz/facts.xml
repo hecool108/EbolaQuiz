@@ -1,21 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <facts>
-    <fact id="1" subject="You cannot get Ebola by sitting in a dark bathroom and say &quot;Bloody Mary&quot; three times while looking in the mirror." image="fact16"/>
-    <fact id="2" subject="Campbell's does not make Ebola soup. (A bowl o' soup)" image=""/>
-    <fact id="3" subject="Your girlfriends underwear does not have Ebola once a month" image=""/>
+    <fact id="1" subject="You cannot get Ebola by sitting in a dark bathroom and say &quot;Bloody Mary&quot; three times while looking in the mirror." image=""/>
+    <fact id="2" subject="Campbell's does not make Ebola soup. (A bowl o' soup)" image="fact2"/>
+    <fact id="3" subject="Your girlfriends underwear does not have Ebola once a month" image="fact3"/>
     <fact id="4" subject="You cannot suck out the Ebola of someone from where they are bleeding. Those are snake bites." image=""/>
-    <fact id="5" subject="People got Ebola because they did not forward a chain mail to three of their friends." image=""/>
-    <fact id="6" subject="Ebola is basically like the cooties. Except that the cooties don't have a 70% mortality rate." image=""/>
-    <fact id="7" subject="A symptom of Ebola is hiccuping. So you either are spicy food, or you have Ebola." image=""/>
-    <fact id="8" subject="Gwyneth Paltrow does not have Ebola." image=""/>
-    <fact id="9" subject="Even a teeny little bit of Ebola can give you Ebola. Ebola: not even once." image=""/>
+    <fact id="5" subject="People got Ebola because they did not forward a chain letter to three of their friends." image="fact5"/>
+    <fact id="6" subject="Ebola is basically like the cooties. Except that the cooties don't have a 70% mortality rate." image="fact6"/>
+    <fact id="7" subject="A symptom of Ebola is hiccuping. So you either are spicy food, or you have Ebola." image="fact7"/>
+    <fact id="8" subject="Gwyneth Paltrow does not have Ebola." image="fact21"/>
+    <fact id="9" subject="Even a teeny little bit of Ebola can give you Ebola." image="fact9"/>
     <fact id="10" subject="If you're rounding down, 0% of people have Ebola" image=""/>
     <fact id="11" subject="Ebola is A lobe backwards. A lobe can be shirt for anterior lobe which is part of your brain. If you squint really hard they're basically the same thing." image=""/>
     <fact id="12" subject="I guess you can call Ebola the one if the deadliest STDs." image=""/>
-    <fact id="13" subject="Not everyone in Africa has Ebola." image=""/>
-    <fact id="14" subject="Ebola is bleeding the economy of Africa." image=""/>
-    <fact id="15" subject="Ebola is distantly related rabies. Many wild dogs have rabies. The Baha Men wrote a song in 2000 about who let the dogs out. The dogs spread out and were out of control in the song. Same thing with the virus today. Conspiracy." image=""/>
+    <fact id="13" subject="Not everyone in Africa has Ebola. And not everyone got a Broncos 2014 Super Bowl Champs T-shirt regardless of what memes say" image="fact13"/>
+    <fact id="14" subject="Ebola is bleeding the economy of Africa. No joke here, but it is happening." image=""/>
+    <fact id="15" subject="Ebola is distantly related rabies. Many wild dogs have rabies. The Baha Men wrote a song in 2000 about who let the dogs out. The dogs spread out and were out of control in the song. Same thing with the virus today. Conspiracy." image="fact15"/>
     <fact id="16" subject="If you survive from a strain of Ebola you can't get it again. They also said you can't get hit by lightning more than once, right Roy Sullivan? (the Ebola thing does have science though)" image="fact16"/>
+    <fact id="17" subject="who is taking care of the Ebola epidemic?" image="fact17"/>
+    <fact id="18" subject="One of the unspoken perks of being a wallflower is that it's a lot harder to get Ebola if nobody interacts with you. " image="fact18"/>
+    <fact id="19" subject="If you stay at home all day long and just wait this bad boy out, you won't get ebola." image="fact19"/>
+    <fact id="20" subject="The mortality rate is 70%. But in Africa they don't have the doctors, medical supplies, and care like those in western countries. And they may or may not have Gatorade. Always delicious when you're sick." image="fact20"/>
+    <fact id="21" subject="Both people in the CDC and people in the UK refer to Ebola as a &quot;bloody disease&quot;" image=""/>
+    <fact id="22" subject="If you say &quot;Ebola&quot; 30 times fast it sounds like you're saying &quot;E Bowl E&quot; which is ok. But you'll also look like a crazy person because you're saying &quot;E Bowl E&quot; or &quot;Ebola&quot; out loud to yourself." image=""/>
+    <fact id="23" subject="It is estimated that 1 billion dollars would be needed to fight the virus. So if 1 billion people donate a dollar, it'll be all ok. Hint hint." image=""/>
+    <fact id="24" subject="The absolute desperate need to get on an airplane and touch and cough on everybody is actually not a symptom of Ebola" image=""/>
+    <fact id="25" subject="Don't eat fruit bats on the ground. You can get ebola that way. " image=""/>
+    <fact id="26" subject="Getting a flu shot helps efforts against Ebola. The beginning symptoms of Ebola are similar to that of the flu. If you get the flu, people will assume you have Ebola and not want to be near you. Hospitals will get overrun with people freaking out. Hysteria will ensue. Doctors will be ticked and your loved ones will stop talking to you. Don't tick off doctors and alienate yourself from loved ones. Get a flu shot." image=""/>
+    
+    
+    
     
 </facts>
 

@@ -28,7 +28,7 @@
         <option id = "4" statement="Dead Ebola guy" image=""/>
     </question>
     <question id="101"
-        subject="when you were in band, did you accidentally play The Ebola?"
+        subject="When you were in band, did you accidentally play The Ebola?"
         answers="1,2"
         desc=""
         image="question1.png">
@@ -37,7 +37,7 @@
         <option id = "3" statement="Yeah that's me!" image=""/>
     </question>
     <question id="102"
-        subject="when you were on vacation, did you take a pic with this little known character?"
+        subject="When you were on vacation, did you take a pic with this little known character?"
         answers="3"
         desc=""
         image="question2.png">
@@ -46,7 +46,7 @@
         <option id = "3" statement="No. I didnt watch Ebola shows growing up. Rugrats for me." image=""/>
     </question>
     <question id="4"
-        subject="How much Ebola do you have."
+        subject="How much Ebola do you have?"
         answers="4"
         desc=""
         image="">
@@ -82,7 +82,7 @@
         <option id = "4" statement="I don't hang around  bodily fluids of Ebola patients (Hint!! This is the right answer)" image=""/>
     </question>
     <question id="103"
-        subject="why did you get this hair cut?"
+        subject="Why did you get this haircut?"
         answers="1,3"
         desc=""
         image="question3.png">
@@ -91,7 +91,7 @@
         <option id = "3" statement="That may look like me but I swear it's not." image=""/>
     </question>
     <question id="8"
-        subject="Do you breathe around Ebola people on a regular basis."
+        subject="Do you breathe around Ebola people on a regular basis?"
         answers="1,2,3,4"
         desc="Trick question. It's not transmitted that way doe. Just don't lick them or do gross stuff."
         image="">
@@ -201,5 +201,23 @@
         <option id = "2" statement="No life" image=""/>
         <option id = "3" statement="Many friends" image=""/>
         <option id = "4" statement="A strong set of skills that are immensely undervalued" image=""/>
+    </question>
+    <question id="21"
+        subject="Have you recently taken part in a traditional West African funeral including kissing the dead to bid them farewell?"
+        answers="3,4"
+        desc=""
+        image="">
+        <option id = "1" statement="Yeah. Crashing funerals is kind of my thing." image=""/>
+        <option id = "2" statement="Yeah-- it's been a rough year..." image=""/>
+        <option id = "3" statement="No. I don't live in West Africa." image=""/>
+        <option id = "4" statement="Just no." image=""/>
+    </question>
+    <question id="22"
+        subject="What did the man with Ebola say while using the app?"
+        answers="1"
+        desc=""
+        image="">
+        <option id = "1" statement="I don’t know I don’t have Ebola" image=""/>
+        <option id = "2" statement="I may have Ebola but at least I have a smartphone." image=""/>
     </question>
 </qs>
