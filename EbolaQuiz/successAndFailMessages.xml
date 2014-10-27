@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <success statement="That bloody nose doesn't mean anything, you're Ebola free!"/>
+    <success statement="Who has Ebola? Not you, that's who. There's only approximately a couple billion people left like you so make sure you revel in that."/>
+    <success statement="No vaccine no problem. No Ebola here. Just stay away from anyone who looks Ebola-y, especially their fluids."/>
+    <fail statement="Well-- looks like you have Ebola. Don't worry though, there's still a 30% chance you'll make it. Good odds!"/>
+    <fail statement="EBooger. You're definitely infected. You can screen shot this and use it as a doctors note
+**theres a 5% chance
+** this won't work as a valid note.
+** percentage is estimated" />
+    <fail statement="Bloody hell. It appears you have a proper virus. You must be right knackered."/>
+    <fail statement="YOU HAVE EBOLA"/>
+    <fail statement="Quarantine party! You have Ebola! Not a great way to meet people, but all the IV you want!"/>
+</root>

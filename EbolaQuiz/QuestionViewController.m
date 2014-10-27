@@ -18,6 +18,8 @@
 @interface QuestionViewController (){
     NSMutableArray *questionsItems;
     NSMutableArray *questions;
+    NSMutableArray *successAnswers;
+    NSMutableArray *failAnswers;
     UIImageView *questionImage;
     QuestionObject *currentQuestion;
     int questionIndex;
@@ -89,9 +91,22 @@
     }
     
 }
+-(NSString *)getRandomWorngTxt{
+    int r = arc4random_uniform((int)failAnswers.count);
+    return [failAnswers objectAtIndex:r];
+}
+-(NSString *)getRandomSuccessTxt{
+    int r = arc4random_uniform((int)failAnswers.count);
+    return [successAnswers objectAtIndex:r];
+}
 -(void)showWrongAnsewerAlert{
+    self.wrongAleartLabel.text = [self getRandomWorngTxt];
+    self.wrongAleartLabel.frame = CGRectMake(self.wrongAleartLabel.frame.origin.x, self.wrongAleartLabel.frame.origin.y, 270, 0);
+    self.wrongAleartLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    self.wrongAleartLabel.numberOfLines = 0;
+    [self.wrongAleartLabel sizeToFit];
     POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
-    animation.toValue = @(100);
+    animation.toValue = @(self.wrongAleartLabel.frame.size.height/2 + 60);
     [self.wrongAleartLabel.layer pop_addAnimation:animation forKey:@"showWrongAnsewerAlert"];
 }
 -(void)hideWrongAnsewerAlert{
@@ -100,8 +115,13 @@
     [self.wrongAleartLabel.layer pop_addAnimation:animation forKey:@"hideWrongAnsewerAlert"];
 }
 -(void)showWinAlert{
+    self.winLabel.text = [self getRandomSuccessTxt];
+    self.winLabel.frame = CGRectMake(self.winLabel.frame.origin.x, self.winLabel.frame.origin.y, 270, 0);
+    self.winLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    self.winLabel.numberOfLines = 0;
+    [self.winLabel sizeToFit];
     POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
-    animation.toValue = @(100);
+    animation.toValue = @(self.winLabel.frame.size.height/2 + 60);
     [self.winLabel.layer pop_addAnimation:animation forKey:@"showWinAlert"];
     winOnShow = YES;
 }
@@ -160,13 +180,27 @@
 -(void)initQuestions{
     questions = [NSMutableArray array];
     NSError *error;
-    NSString *str=[[NSBundle mainBundle] pathForResource:@"questions" ofType:@"xml"];
+    NSString *str = [[NSBundle mainBundle] pathForResource:@"questions" ofType:@"xml"];
     NSData *data = [NSData dataWithContentsOfFile:str options:NSDataReadingMapped error:&error];
     TFHpple * doc       = [[TFHpple alloc] initWithHTMLData:data];
     NSArray *elements  = [doc searchWithXPathQuery:@"//question"];
     for (int i = 0; i < elements.count; i++) {
         TFHppleElement *ele = elements[i];
         [questions addObject:[[QuestionObject alloc] initWithTFHppleElement:ele]];
+    }
+    
+    successAnswers = [NSMutableArray array];
+    failAnswers = [NSMutableArray array];
+    str = [[NSBundle mainBundle] pathForResource:@"successAndFailMessages" ofType:@"xml"];
+    data = [NSData dataWithContentsOfFile:str options:NSDataReadingMapped error:&error];
+    doc = [[TFHpple alloc] initWithHTMLData:data];
+    elements  = [doc searchWithXPathQuery:@"//success"];
+    for (TFHppleElement *ele in elements) {
+        [successAnswers addObject:[[ele attributes] valueForKey:@"statement"]];
+    }
+    elements  = [doc searchWithXPathQuery:@"//fail"];
+    for (TFHppleElement *ele in elements) {
+        [failAnswers addObject:[[ele attributes] valueForKey:@"statement"]];
     }
 }
 

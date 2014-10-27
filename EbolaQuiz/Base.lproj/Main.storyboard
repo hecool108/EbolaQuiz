@@ -218,11 +218,13 @@
                                 <size key="shadowOffset" width="3" height="-1"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oh man… You probably, most likely dedinitely got Ebola(0.001%-109%  chance). Just don't spit in  anyones mouth or nothing." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wn8-zM-Vvk">
-                                <rect key="frame" x="51" y="-150" width="219" height="110"/>
+                                <rect key="frame" x="25" y="-150" width="270" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.99285300925925923" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.67843137249999996" green="0.1137254902" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="1" height="1"/>
                             </label>
                             <view contentMode="scaleToFill" id="sGF-Tm-dxy">
                                 <rect key="frame" x="0.0" y="239" width="320" height="90"/>
@@ -309,7 +311,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8eq-3k-Bcw">
-                                <rect key="frame" x="57" y="-144" width="206" height="144"/>
+                                <rect key="frame" x="25" y="-150" width="270" height="144"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">E Boo-yah.Get out of here
 Ebola. You're Ebola free!
@@ -318,8 +320,10 @@ there are only
 7000148991 people left
 in the world without Ebola.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.45882352939999999" green="0.84705882349999995" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.19774305555555555" green="0.48842592592592593" blue="0.28368055555555555" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="1" height="1"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
